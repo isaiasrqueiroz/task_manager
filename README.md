@@ -1,20 +1,99 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# React Task Manager
 
-# Run and deploy your AI Studio app
+Um aplicativo completo de gerenciamento de tarefas construído com React, TypeScript e Tailwind CSS. Ele permite que os usuários realizem operações CRUD (Criar, Ler, Atualizar, Excluir) em tarefas, importem/exportem dados em massa e visualizem métricas de desempenho em um dashboard interativo.
 
-This contains everything you need to run your app locally.
+## Funcionalidades Principais
 
-View your app in AI Studio: https://ai.studio/apps/drive/1UwIFnbWnQ7jkyoVYKMaWzdRLJgkPkhlP
+- **Gerenciamento de Tarefas (CRUD):** Crie, edite e exclua tarefas através de um formulário modal intuitivo.
+- **Dashboard de Performance:** Analise o progresso do projeto com:
+  - **Curva S de Entrega:** Compare as horas planejadas acumuladas com as horas entregues/previstas.
+  - **Gráficos de Pizza:** Visualize a distribuição de tarefas por status e o status geral de conclusão (concluídas vs. pendentes).
+  - **Cards de Status:** Contagem rápida de tarefas em cada estágio do fluxo de trabalho.
+- **Visualização de Timeline (Gráfico de Gantt):** Visualize as tarefas em um cronograma interativo para entender a sobreposição e a duração.
+- **Importação e Exportação de XLS/XLSX:** Adicione tarefas em massa a partir de uma planilha do Excel e exporte a lista de tarefas atual para o mesmo formato.
+- **Análise com IA (Gemini):** Obtenha insights e sugestões acionáveis sobre o status do projeto analisando os dados do dashboard com a API do Google Gemini.
+- **Filtro Dinâmico:** Pesquise e filtre tarefas rapidamente na visualização de tabela.
+- **Suporte a Múltiplos Idiomas:** Interface disponível em Português (pt-br) e Inglês (en).
+- **Tema Escuro/Claro:** Alterne entre os modos claro, escuro ou use a preferência do sistema.
+- **Design Responsivo:** A interface se adapta a diferentes tamanhos de tela, de desktops a dispositivos móveis.
 
-## Run Locally
+## Tech Stack
 
-**Prerequisites:**  Node.js
+- **Frontend:**
+  - [React](https://reactjs.org/)
+  - [TypeScript](https://www.typescriptlang.org/)
+  - [Tailwind CSS](https://tailwindcss.com/) para estilização.
+- **Bibliotecas:**
+  - [Recharts](https://recharts.org/): Para a criação dos gráficos do dashboard.
+  - [jsPDF](https://github.com/parallax/jsPDF) & [html2canvas](https://html2canvas.hertzen.com/): Para exportar o dashboard como PDF.
+  - [xlsx](https://sheetjs.com/): Para manipulação de arquivos Excel (importação/exportação).
+  - [@google/genai](https://www.npmjs.com/package/@google/genai): Para integração com a API do Google Gemini.
+- **Ambiente de Desenvolvimento:**
+  - O projeto utiliza um `importmap` no `index.html` para carregar as dependências diretamente de uma CDN (esm.sh), eliminando a necessidade de um passo de `npm install` para as bibliotecas do frontend.
 
+## Estrutura do Projeto
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```
+/
+├── components/          # Componentes React reutilizáveis (UI, formulários, etc.)
+│   ├── ui/              # Componentes de UI genéricos (Modal, Switch, etc.)
+│   └── ...
+├── contexts/            # Contextos React (ThemeProvider)
+├── locales/             # Arquivos de tradução JSON (i18n)
+├── services/            # Lógica de negócio (taskService, aiService)
+├── App.tsx              # Componente principal da aplicação
+├── constants.tsx        # Constantes da aplicação (cores, ícones, etc.)
+├── i18n.tsx             # Configuração do provedor de internacionalização
+├── index.html           # Ponto de entrada HTML
+├── index.tsx            # Ponto de entrada do React
+├── metadata.json        # Metadados da aplicação
+├── README.md            # Este arquivo
+└── types.ts             # Definições de tipos TypeScript
+```
+
+## Como Executar o Projeto (Build e Instruções)
+
+Este projeto foi projetado para ser executado sem um processo de build complexo. Ele consiste em arquivos estáticos (`.html`, `.tsx`) que podem ser servidos por qualquer servidor web simples.
+
+### Pré-requisitos
+
+1.  **Servidor Web Local:** Você precisará de uma maneira de servir os arquivos localmente. Uma opção popular e fácil é o pacote `serve` do Node.js.
+2.  **API Key do Gemini:** Para que as funcionalidades de IA funcionem (Análise do Dashboard), uma chave de API do Google Gemini é necessária.
+
+### Passos para a Instalação
+
+1.  **Clone o repositório (ou tenha os arquivos localmente):**
+    Se você estivesse usando git:
+    ```bash
+    git clone <URL_DO_REPOSITORIO>
+    cd <NOME_DA_PASTA>
+    ```
+
+2.  **Instale o `serve` (se ainda não o tiver):**
+    ```bash
+    npm install -g serve
+    ```
+
+3.  **Configure a Chave de API:**
+    A aplicação espera que a variável de ambiente `process.env.API_KEY` esteja disponível no contexto de execução. Ao executar localmente com um servidor estático simples, essa variável não será injetada automaticamente.
+    **Para fins de desenvolvimento local, você pode temporariamente substituir a chamada no `services/aiService.ts`:**
+    
+    *Abra `services/aiService.ts` e encontre a linha:*
+    ```typescript
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
+    ```
+    *Substitua por sua chave (lembre-se de **NÃO** comitar esta alteração):*
+    ```typescript
+    const ai = new GoogleGenAI({ apiKey: "SUA_API_KEY_AQUI" });
+    ```
+
+4.  **Inicie o Servidor:**
+    No diretório raiz do projeto, execute o seguinte comando:
+    ```bash
+    serve .
+    ```
+
+5.  **Acesse a Aplicação:**
+    O comando `serve` informará o endereço local onde a aplicação está sendo executada, geralmente `http://localhost:3000`. Abra este endereço em seu navegador.
+
+A aplicação agora está em execução localmente!
