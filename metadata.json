@@ -1,0 +1,5 @@
+{
+  "name": "Copy of React Task Manager",
+  "description": "A comprehensive task management application built with React, TypeScript, and Tailwind CSS. It allows users to perform CRUD operations on tasks and view performance metrics on a dashboard.",
+  "requestFramePermissions": []
+}

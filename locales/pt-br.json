@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "title": "Task Manager",
+    "tasks": "Lista de Tarefas",
+    "dashboard": "Dashboard"
+  },
+  "general": {
+    "yes": "Sim",
+    "no": "Não"
+  },
+  "taskList": {
+    "title": "Gerenciador de Tarefas",
+    "subtitle": "Visualize e gerencie suas tarefas aqui.",
+    "filterPlaceholder": "Filtrar tarefas...",
+    "newTaskButton": "Nova Tarefa",
+    "exportXLSButton": "Exportar XLS",
+    "importXLSButton": "Importar XLS",
+    "loading": "Carregando tarefas...",
+    "noTasks": "Nenhuma tarefa encontrada.",
+    "noTasksTimeline": "Nenhuma tarefa para exibir na timeline.",
+    "view": {
+      "table": "Tabela",
+      "timeline": "Timeline"
+    },
+    "headers": {
+      "id": "Task ID",
+      "description": "Descrição",
+      "category": "Categoria",
+      "status": "Status",
+      "urgent": "Urgente",
+      "important": "Importante",
+      "estimatedHours": "Horas Est.",
+      "startDate": "Data Início",
+      "deadline": "Deadline",
+      "completionDate": "Data Conclusão",
+      "daysLeft": "Dias Rest.",
+      "actions": "Ações"
+    }
+  },
+  "confirmationModal": {
+    "deleteTitle": "Excluir Tarefa",
+    "deleteMessage": "Você tem certeza que deseja excluir esta tarefa? Esta ação não pode ser desfeita.",
+    "confirmButton": "Excluir",
+    "cancelButton": "Cancelar"
+  },
+  "taskForm": {
+    "editTitle": "Editar Tarefa",
+    "newTitle": "Nova Tarefa",
+    "taskIdLabel": "Task ID",
+    "descriptionLabel": "Descrição",
+    "categoryLabel": "Categoria",
+    "statusLabel": "Status",
+    "urgentLabel": "Urgente",
+    "importantLabel": "Importante",
+    "startDateLabel": "Data Início",
+    "hoursLabel": "Horas Estimadas",
+    "completionDateLabel": "Data de Conclusão",
+    "calculatedDeadline": "Deadline Calculado",
+    "generateDescriptionTooltip": "Gerar descrição com IA",
+    "estimateHoursTooltip": "Estimar horas com IA",
+    "aiError": "Ocorreu um erro ao usar o assistente de IA.",
+    "taskIdError": "Task ID é obrigatório.",
+    "descriptionError": "Descrição é obrigatória.",
+    "hoursError": "Horas estimadas devem ser maior que zero.",
+    "saveButton": "Salvar",
+    "cancelButton": "Cancelar"
+  },
+  "taskImportModal": {
+    "title": "Importar Tarefas do XLS",
+    "subtitle": "Encontramos {{count}} tarefas em seu arquivo. Revise-as antes de importar.",
+    "valid": "Válida",
+    "invalid": "Inválida",
+    "importButton": "Importar {{count}} Tarefas",
+    "validCount": "{{count}} tarefas prontas para importação.",
+    "invalidCount": "{{count}} tarefas com erros não serão importadas.",
+    "tableHeaders": {
+      "status": "Validação",
+      "errors": "Erros"
+    },
+    "fileError": "Ocorreu um erro ao ler o arquivo. Verifique se o formato está correto.",
+    "errors": {
+      "missingTaskId": "Task ID é obrigatório.",
+      "missingDescription": "Descrição é obrigatória.",
+      "invalidCategory": "Categoria '{{value}}' é inválida.",
+      "invalidStatus": "Status '{{value}}' é inválido.",
+      "invalidUrgent": "Valor '{{value}}' para Urgente é inválido. Use 'Sim' ou 'Não'.",
+      "invalidImportant": "Valor '{{value}}' para Importante é inválido. Use 'Sim' ou 'Não'.",
+      "invalidHours": "Horas estimadas devem ser um número positivo.",
+      "missingStartDate": "Data de Início é obrigatória.",
+      "invalidStartDate": "Data de Início '{{value}}' é inválida.",
+      "invalidCompletionDate": "Data de Conclusão '{{value}}' é inválida."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard de Performance",
+    "exportPDFButton": "Exportar PDF",
+    "exporting": "Exportando...",
+    "generatingPDF": "Gerando PDF...",
+    "aiAnalysisButton": "Análise com IA",
+    "aiAnalysisTitle": "Análise do Dashboard com IA",
+    "analyzing": "Analisando dados...",
+    "analysisError": "Não foi possível gerar a análise. Tente novamente.",
+    "close": "Fechar",
+    "sCurveTitle": "Curva S de Entrega",
+    "subtitle": "Comparativo de entrega planejada vs. real/prevista",
+    "loading": "Carregando dados do dashboard...",
+    "plannedDelivery": "Entrega Planejada",
+    "actualDelivery": "Entrega Real/Prevista",
+    "completionStatus": "Status de Conclusão",
+    "statusDistribution": "Distribuição por Status",
+    "completed": "Concluídas",
+    "pending": "Pendentes",
+    "taskSingular": "tarefa",
+    "taskPlural": "tarefas"
+  },
+  "timeline": {
+    "taskCount": "{{count}} tarefas",
+    "daysLeftSuffix": "dias rest.",
+    "startDate": "Data Início",
+    "endDate": "Data Fim",
+    "today": "Hoje"
+  },
+  "categories": {
+    "Ciclo": "Ciclo",
+    "Cadastro": "Cadastro",
+    "Apontamento": "Apontamento",
+    "Relatorio": "Relatório",
+    "Corretiva": "Corretiva"
+  },
+  "statuses": {
+    "Aguardando": "Aguardando",
+    "EmDesenvolvimento": "Em desenvolvimento",
+    "EmTestes": "Em testes",
+    "EmHomologacao": "Em Homologação",
+    "AguardandoDeploy": "Aguardando Deploy",
+    "DeployFinalizado": "Deploy finalizado"
+  },
+  "months": {
+    "jan": "Jan", "fev": "Fev", "mar": "Mar", "abr": "Abr", "mai": "Mai", "jun": "Jun",
+    "jul": "Jul", "ago": "Ago", "set": "Set", "out": "Out", "nov": "Nov", "dez": "Dez"
+  }
+}
