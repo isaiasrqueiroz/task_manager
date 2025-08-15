@@ -65,11 +65,11 @@
         }
       }
     </script>
-  <link rel="stylesheet" href="/index.css">
-</head>
+    <!-- Babel for in-browser JSX/TSX transpilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
   <body class="bg-slate-50 dark:bg-dark-bg text-gray-800 dark:text-dark-text">
     <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
+  </body>
 </html>
