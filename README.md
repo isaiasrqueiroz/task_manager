@@ -87,3 +87,21 @@ Este projeto foi projetado para ser executado sem um processo de build complexo.
     O comando `serve` informará o endereço local onde a aplicação está sendo executada, geralmente `http://localhost:3000`. Abra este endereço em seu navegador.
 
 A aplicação agora está em execução localmente!
+
+## Deploy com GitHub Pages
+
+Você pode publicar esta aplicação gratuitamente usando o GitHub Pages.
+
+1.  **Crie um repositório no GitHub:** Se ainda não o fez, crie um novo repositório e envie todos os arquivos do projeto para ele.
+
+2.  **Vá para as Configurações:** No seu repositório no GitHub, clique na aba **"Settings"**.
+
+3.  **Navegue até "Pages":** No menu lateral esquerdo, clique em **"Pages"**.
+
+4.  **Configure a Fonte de Publicação:**
+    - Em "Build and deployment", na seção "Source", selecione **"Deploy from a branch"**.
+    - Na seção "Branch", certifique-se de que a branch `main` (ou `master`) está selecionada.
+    - Mantenha a pasta como `/(root)`.
+    - Clique em **"Save"**.
+
+5.  **Aguarde a Publicação:** O GitHub Actions iniciará um processo para publicar seu site. Isso pode levar alguns minutos. A página será atualizada com o link do seu site ao vivo (algo como `https://<seu-usuario>.github.io/<seu-repositorio>/`) assim que estiver pronto.
