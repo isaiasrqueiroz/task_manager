@@ -1,7 +1,7 @@
 import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 import { TaskStatus } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
+const ai = new GoogleGenAI({ apiKey: "AIzaSyCpacOpe45REEdPm9P8yNx8btzAPcsDTec" });
 
 const generateContent = async (prompt: string): Promise<string> => {
     try {

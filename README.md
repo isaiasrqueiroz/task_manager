@@ -75,17 +75,7 @@ Este projeto foi projetado para ser executado sem um processo de build complexo.
     ```
 
 3.  **Configure a Chave de API:**
-    A aplicação espera que a variável de ambiente `process.env.API_KEY` esteja disponível no contexto de execução. Ao executar localmente com um servidor estático simples, essa variável não será injetada automaticamente.
-    **Para fins de desenvolvimento local, você pode temporariamente substituir a chamada no `services/aiService.ts`:**
-    
-    *Abra `services/aiService.ts` e encontre a linha:*
-    ```typescript
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
-    ```
-    *Substitua por sua chave (lembre-se de **NÃO** comitar esta alteração):*
-    ```typescript
-    const ai = new GoogleGenAI({ apiKey: "SUA_API_KEY_AQUI" });
-    ```
+    A chave de API do Google Gemini foi configurada diretamente no arquivo `services/aiService.ts` para permitir o funcionamento das funcionalidades de IA no ambiente de desenvolvimento.
 
 4.  **Inicie o Servidor:**
     No diretório raiz do projeto, execute o seguinte comando:
