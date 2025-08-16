@@ -76,7 +76,7 @@ Este projeto foi projetado para ser executado sem um processo de build complexo.
     ```
 
 3.  **Configure a Chave de API:**
-    A chave de API do Google Gemini foi configurada diretamente no arquivo `services/aiService.ts` para permitir o funcionamento das funcionalidades de IA no ambiente de desenvolvimento.
+    Para que as funcionalidades de IA funcionem, a chave de API do Google Gemini deve ser disponibilizada como uma variável de ambiente `API_KEY`. A aplicação está configurada para ler a chave a partir de `process.env.API_KEY`. Como este projeto não tem um backend, a forma como você define esta variável dependerá do seu ambiente de hospedagem ou de ferramentas locais (se houver).
 
 4.  **Inicie o Servidor:**
     No diretório raiz do projeto, execute o seguinte comando:
@@ -105,5 +105,7 @@ Você pode publicar esta aplicação gratuitamente usando o GitHub Pages. O proj
     - Clique em **"Save"**.
 
 5.  **Aguarde a Publicação:** O GitHub Actions iniciará um processo para publicar seu site. Isso pode levar alguns minutos. A página será atualizada com o link do seu site ao vivo (algo como `https://<seu-usuario>.github.io/<seu-repositorio>/`) assim que estiver pronto. Você pode acompanhar o progresso na aba "Actions" do seu repositório.
+
+**Nota sobre a API Key:** Para que a funcionalidade de IA funcione no GitHub Pages, você precisaria de um serviço intermediário (como uma Cloud Function) para gerenciar sua chave de API de forma segura, pois não é possível definir variáveis de ambiente diretamente em um site estático do GitHub Pages. Expor sua chave no código do frontend não é seguro.
 
 Seu site estará no ar e funcionando!
