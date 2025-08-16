@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import TaskList from './components/TaskList';
-import Dashboard from './components/Dashboard';
-import { useTranslation } from './i18n';
-import { useTheme } from './contexts/ThemeContext';
+import TaskList from './components/TaskList.tsx';
+import Dashboard from './components/Dashboard.tsx';
+import { useTranslation } from './i18n.tsx';
+import { useTheme } from './contexts/ThemeContext.tsx';
 
 type View = 'tasks' | 'dashboard';
 

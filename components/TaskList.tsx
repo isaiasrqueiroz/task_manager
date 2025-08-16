@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import * as XLSX from 'xlsx';
-import { taskService } from '../services/taskService';
-import { Task, TaskCategory, TaskStatus } from '../types';
-import { CATEGORY_COLORS, STATUS_COLORS, ICONS } from '../constants';
-import TaskFormModal from './TaskFormModal';
-import TaskImportModal, { ValidatedTask } from './TaskImportModal';
-import BacklogTimeline from './BacklogTimeline';
-import ConfirmationModal from './ui/ConfirmationModal';
-import { useTranslation } from '../i18n';
+import { taskService } from '../services/taskService.ts';
+import { Task, TaskCategory, TaskStatus } from '../types.ts';
+import { CATEGORY_COLORS, STATUS_COLORS, ICONS } from '../constants.tsx';
+import TaskFormModal from './TaskFormModal.tsx';
+import TaskImportModal, { ValidatedTask } from './TaskImportModal.tsx';
+import BacklogTimeline from './BacklogTimeline.tsx';
+import ConfirmationModal from './ui/ConfirmationModal.tsx';
+import { useTranslation } from '../i18n.tsx';
 
 const calculateDeadline = (startDate: Date, hours: number): Date => {
     if (!hours || hours <= 0) return new Date(NaN);

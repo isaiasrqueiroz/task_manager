@@ -1,7 +1,7 @@
 import React, { useMemo, useRef, useEffect } from 'react';
-import { Task, TaskStatus } from '../types';
-import { useTranslation } from '../i18n';
-import { ICONS } from '../constants';
+import { Task, TaskStatus } from '../types.ts';
+import { useTranslation } from '../i18n.tsx';
+import { ICONS } from '../constants.tsx';
 
 interface BacklogTimelineProps {
   tasks: Task[];

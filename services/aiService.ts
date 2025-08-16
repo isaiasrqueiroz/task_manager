@@ -1,5 +1,5 @@
 import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
-import { TaskStatus } from "../types";
+import { TaskStatus } from "../types.ts";
 
 const ai = new GoogleGenAI({ apiKey: "AIzaSyCpacOpe45REEdPm9P8yNx8btzAPcsDTec" });
 

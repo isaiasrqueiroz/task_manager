@@ -1,4 +1,4 @@
-import { TaskCategory, TaskStatus } from './types';
+import { TaskCategory, TaskStatus } from './types.ts';
 import type { ReactNode } from 'react';
 
 export const CATEGORY_OPTIONS = Object.values(TaskCategory);
