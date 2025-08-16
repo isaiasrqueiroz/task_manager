@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Task, TaskCategory, TaskStatus } from '../types';
-import { CATEGORY_OPTIONS, STATUS_OPTIONS } from '../constants';
-import Modal from './ui/Modal';
-import Switch from './ui/Switch';
-import { useTranslation } from '../i18n';
+import { Task, TaskCategory, TaskStatus } from '../types.ts';
+import { CATEGORY_OPTIONS, STATUS_OPTIONS } from '../constants.tsx';
+import Modal from './ui/Modal.tsx';
+import Switch from './ui/Switch.tsx';
+import { useTranslation } from '../i18n.tsx';
 
 interface TaskFormModalProps {
   isOpen: boolean;
