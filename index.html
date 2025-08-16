@@ -1,21 +1,75 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
-import { I18nProvider } from './i18n.tsx';
-import { ThemeProvider } from './contexts/ThemeContext.tsx';
-
-const rootElement = document.getElementById('root');
-if (!rootElement) {
-  throw new Error("Could not find root element to mount to");
-}
-
-const root = ReactDOM.createRoot(rootElement);
-root.render(
-  <React.StrictMode>
-    <I18nProvider>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
-    </I18nProvider>
-  </React.StrictMode>
-);
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Task Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Flicker-prevention script
+      (function() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class', // Enable class-based dark mode
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#A100FF',
+              'primary-dark': '#8100CC',
+              'primary-light': 'rgba(161, 0, 255, 0.1)',
+              // Dark mode colors
+              dark: {
+                bg: '#111827', // slate-900
+                card: '#1f2937', // slate-800
+                border: '#374151', // slate-700
+                text: '#d1d5db', // gray-300
+                'text-secondary': '#9ca3af', // gray-400
+              }
+            },
+            backgroundImage: {
+              'hatched': "repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 2px, transparent 2px, transparent 4px)",
+            },
+            keyframes: {
+              fadeInUp: {
+                'from': { opacity: 0, transform: 'translateY(1rem)' },
+                'to': { opacity: 1, transform: 'translateY(0)' },
+              },
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+            }
+          }
+        }
+      }
+    </script>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@^19.1.1",
+          "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+          "react/": "https://esm.sh/react@^19.1.1/",
+          "recharts": "https://esm.sh/recharts@^3.1.2",
+          "html2canvas": "https://esm.sh/html2canvas@^1.4.1",
+          "jspdf": "https://esm.sh/jspdf@^2.5.1",
+          "xlsx": "https://esm.sh/xlsx@^0.18.5",
+          "@google/genai": "https://esm.sh/@google/genai"
+        }
+      }
+    </script>
+    <!-- Babel for in-browser JSX/TSX transpilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body class="bg-slate-50 dark:bg-dark-bg text-gray-800 dark:text-dark-text">
+    <div id="root"></div>
+    <script type="text/babel" data-presets="env,react,typescript" src="index.tsx"></script>
+  </body>
+</html>
