@@ -35,7 +35,7 @@ export const I18nProvider: React.FC<{ children: React.ReactNode }> = ({ children
   useEffect(() => {
     const loadTranslations = async (lang: Language) => {
       try {
-        const response = await fetch(`./locales/${lang}.json`);
+        const response = await fetch(`locales/${lang}.json`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
