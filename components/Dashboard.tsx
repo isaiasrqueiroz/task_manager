@@ -2,13 +2,13 @@ import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
-import { taskService } from '../services/taskService';
-import { aiService } from '../services/aiService';
-import { Task, TaskStatus } from '../types';
-import { useTranslation } from '../i18n';
-import { useTheme } from '../contexts/ThemeContext';
-import { STATUS_ICONS, STATUS_VISUALS, ICONS } from '../constants';
-import Modal from './ui/Modal';
+import { taskService } from '../services/taskService.ts';
+import { aiService } from '../services/aiService.ts';
+import { Task, TaskStatus } from '../types.ts';
+import { useTranslation } from '../i18n.tsx';
+import { useTheme } from '../contexts/ThemeContext.tsx';
+import { STATUS_ICONS, STATUS_VISUALS, ICONS } from '../constants.tsx';
+import Modal from './ui/Modal.tsx';
 
 const getEnumKeyByValue = <T extends object>(enumObj: T, value: string): keyof T | undefined => {
     return (Object.keys(enumObj) as Array<keyof T>).find(key => enumObj[key] === value);
