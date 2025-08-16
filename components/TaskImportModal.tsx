@@ -1,6 +1,6 @@
 import React from 'react';
-import Modal from './ui/Modal';
-import { useTranslation } from '../i18n';
+import Modal from './ui/Modal.tsx';
+import { useTranslation } from '../i18n.tsx';
 
 export interface ValidatedTask {
   data: any;
