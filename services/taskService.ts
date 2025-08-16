@@ -1,4 +1,4 @@
-import { Task, TaskCategory, TaskStatus } from '../types';
+import { Task, TaskCategory, TaskStatus } from '../types.ts';
 
 let tasks: Task[] = [];
 
