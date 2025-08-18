@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Task } from '../types';
+import { Task } from '../types.ts';
 
 interface TaskFormModalProps {
   isOpen: boolean;

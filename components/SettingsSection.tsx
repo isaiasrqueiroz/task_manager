@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
-import { Task } from '../types';
-import { TrashIcon } from './icons/TrashIcon';
-import { PlusIcon } from './icons/PlusIcon';
+import { Task } from '../types.ts';
+import { TrashIcon } from './icons/TrashIcon.tsx';
+import { PlusIcon } from './icons/PlusIcon.tsx';
 
 interface SettingsSectionProps {
   title: string;

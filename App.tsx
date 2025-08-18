@@ -1,12 +1,12 @@
 
 import React, { useState, useCallback, useMemo } from 'react';
-import { Task } from './types';
-import { useLocalStorage } from './hooks/useLocalStorage';
-import Header from './components/Header';
-import TaskList from './components/TaskList';
-import TaskFormModal from './components/TaskFormModal';
-import ConfirmationDialog from './components/ConfirmationDialog';
-import SettingsPage from './components/SettingsPage';
+import { Task } from './types.ts';
+import { useLocalStorage } from './hooks/useLocalStorage.ts';
+import Header from './components/Header.tsx';
+import TaskList from './components/TaskList.tsx';
+import TaskFormModal from './components/TaskFormModal.tsx';
+import ConfirmationDialog from './components/ConfirmationDialog.tsx';
+import SettingsPage from './components/SettingsPage.tsx';
 
 const App: React.FC = () => {
   const [tasks, setTasks] = useLocalStorage<Task[]>('tasks', []);

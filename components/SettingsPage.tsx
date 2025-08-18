@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { Task } from '../types';
-import SettingsSection from './SettingsSection';
+import { Task } from '../types.ts';
+import SettingsSection from './SettingsSection.tsx';
 
 interface SettingsPageProps {
   categories: string[];

@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
-import { Task } from '../types';
-import { calculateEndDate, calculateRemainingWorkdays } from '../utils/dateUtils';
-import { PencilIcon } from './icons/PencilIcon';
-import { TrashIcon } from './icons/TrashIcon';
+import { Task } from '../types.ts';
+import { calculateEndDate, calculateRemainingWorkdays } from '../utils/dateUtils.ts';
+import { PencilIcon } from './icons/PencilIcon.tsx';
+import { TrashIcon } from './icons/TrashIcon.tsx';
 
 interface TaskItemProps {
   task: Task;

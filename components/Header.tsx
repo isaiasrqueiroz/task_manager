@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { PlusIcon } from './icons/PlusIcon';
-import { CogIcon } from './icons/CogIcon';
-import { ArrowLeftIcon } from './icons/ArrowLeftIcon';
+import { PlusIcon } from './icons/PlusIcon.tsx';
+import { CogIcon } from './icons/CogIcon.tsx';
+import { ArrowLeftIcon } from './icons/ArrowLeftIcon.tsx';
 
 interface HeaderProps {
   onAddTask: () => void;
