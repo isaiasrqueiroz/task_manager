@@ -1,0 +1,5 @@
+{
+  "name": "Accenture Task Manager",
+  "description": "A client-side CRUD application for managing tasks, designed for deployment on GitHub Pages. All data is stored locally in the browser using localStorage. This app helps track tasks with details like category, status, urgency, importance, and deadlines, following Accenture's visual identity.",
+  "requestFramePermissions": []
+}
